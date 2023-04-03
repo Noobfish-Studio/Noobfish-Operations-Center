@@ -1,0 +1,33 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="Noobfish_Operations_Center.Pages.Connection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Noobfish_Operations_Center.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock Text="Connection" FontSize="36" Margin="10" FontWeight="Bold"/>
+            <TextBlock Text="PMDG 737 Family" FontSize="20" Margin="10" FontWeight="Bold" />
+            <Image Source="/Assets/Images/pmdg737_thumbnail.png" Stretch="UniformToFill" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
+            <TextBlock Text="You can click to launch the console program to connect to PMDG 737NGXu. Please note that the currently supported version of Prepar3D is V4 or V5." Margin="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Connect to P3D" Margin="10" Click="connect_to_p4d"/>
+                <Button Content="Disconnect from P3D" Margin="10" Click="stop_p4d"/>
+                <TextBlock x:Name="P3DConnectionStatus" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+            <TextBlock Text="You can click to launch the console program to connect to PMDG 737NG3." Margin="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Connect to MSFS" Margin="10" Click="connect_to_msfs"/>
+                <Button Content="Disconnect from MSFS" Margin="10" Click="stop_msfs"/>
+                <TextBlock x:Name="MSFSConnectionStatus" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+
+</Page>

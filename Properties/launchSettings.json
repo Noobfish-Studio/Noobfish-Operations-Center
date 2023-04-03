@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Noobfish_Operations_Center (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Noobfish_Operations_Center (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

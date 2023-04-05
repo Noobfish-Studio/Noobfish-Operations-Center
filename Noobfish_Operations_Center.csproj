@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -10,17 +11,27 @@
     <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA512</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Never</AppxBundle>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <PackageCertificateKeyFile>Noobfish_Operations_Center_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Connections\msfs.exe" />
     <None Remove="Connections\p4d.exe" />
+    <None Remove="Connections\SimConnect.dll" />
+    <None Remove="MultilingualResources\Noobfish_Operations_Center.zh-Hans.xlf" />
     <None Remove="Pages\About.xaml" />
     <None Remove="Pages\Connection.xaml" />
     <None Remove="Pages\Hardware.xaml" />
     <None Remove="Pages\Home.xaml" />
-    <None Remove="Pages\Settings.xaml" />
+    <None Remove="Pages\Setting.xaml" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -29,7 +40,6 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="Connections\msfs.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -37,14 +47,21 @@
     <EmbeddedResource Include="Connections\p4d.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Connections\SimConnect.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\en-US\Resources.resw">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\zh-CN\Resources.resw">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.2.221109.1" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
-
   <!-- 
     Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
     Tools extension to be activated for this project even if the Windows App SDK Nuget
@@ -64,11 +81,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Pages\Settings.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Page Update="Home.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -83,7 +95,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-
   <!-- 
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
     Explorer "Package and Publish" context menu entry to be enabled for this project even if 
@@ -92,4 +103,13 @@
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Noobfish_Operations_Center.zh-Hans.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="Strings\zh-CN\Resources.resw" />
+  </ItemGroup>
 </Project>

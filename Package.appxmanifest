@@ -8,8 +8,8 @@
 
   <Identity
     Name="099e13b8-8a68-4e9c-8649-211960a792d2"
-    Publisher="CN=738NGX"
-    Version="1.0.0.0" />
+    Publisher="CN=Noobfish Studio"
+    Version="0.1.1.0" />
 
   <Properties>
     <DisplayName>Noobfish_Operations_Center</DisplayName>
@@ -23,7 +23,8 @@
   </Dependencies>
 
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="en-US"/>
+	<Resource Language="zh-CN"/>
   </Resources>
 
   <Applications>

@@ -10,10 +10,62 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        
-        <StackPanel HorizontalAlignment="Stretch">
-            
+    <ScrollViewer>
+        <StackPanel>
+            <Grid>
+                <Image Source="/Assets/Images/Home.png" Stretch="UniformToFill" Height="Auto"/>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid CornerRadius="20" Height="150" Width="150" Margin="20">
+                        <!--" Image Source="/Assets/StoreLogo.scale-400.png" Stretch="UniformToFill"/-->
+                        <Image Source="/Assets/Images/logo11.png" Stretch="UniformToFill"/>
+                    </Grid>
+                    <TextBlock Text="Noobfish Studio" FontSize="36"  HorizontalAlignment="Center" />
+                    <TextBlock Text="Operations Center" FontSize="48" FontWeight="Bold" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <ItemsControl>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="5" HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <Button Height="250" Width="200" Background="White" Margin="10" CornerRadius="20" Click="openWebsite">
+                    <StackPanel>
+                        <FontIcon Glyph="&#xEB41;" FontSize="48" Margin="20"/>
+                        <TextBlock x:Uid="Website" FontSize="24"  HorizontalAlignment="Left" FontWeight="Bold" />
+                        <TextBlock x:Uid="Visit_our_official_website" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="180"/>
+                    </StackPanel>
+                </Button>
+                <Button Height="250" Width="200" Background="White" Margin="10" CornerRadius="20" Click="openGithub">
+                    <StackPanel>
+                        <Image Source="/Assets/Images/Github.png" Height="48" Margin="20"/>
+                        <TextBlock Text="Github" FontSize="24"  HorizontalAlignment="Left" FontWeight="Bold" />
+                        <TextBlock x:Uid="View_our_Github" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="180"/>
+                    </StackPanel>
+                </Button>
+                <Button Height="250" Width="200" Background="White" Margin="10" CornerRadius="20">
+                    <StackPanel>
+                        <FontIcon Glyph="&#xE8A5;" FontSize="48" Margin="20"/>
+                        <TextBlock x:Uid="Document" FontSize="24"  HorizontalAlignment="Left" FontWeight="Bold" />
+                        <TextBlock x:Uid="Check_out_the_document" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="180"/>
+                    </StackPanel>
+                </Button>
+                <Button Height="250" Width="200" Background="White" Margin="10" CornerRadius="20">
+                    <StackPanel>
+                        <FontIcon Glyph="&#xE7BF;" FontSize="48" Margin="20"/>
+                        <TextBlock x:Uid="Shop" FontSize="24"  HorizontalAlignment="Left" FontWeight="Bold" />
+                        <TextBlock x:Uid="Subscribe_and_purchase" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="180"/>
+
+                    </StackPanel>
+                </Button>
+                <Button Height="250" Width="200" Background="White" Margin="10" CornerRadius="20">
+                    <StackPanel>
+                        <FontIcon Glyph="&#xE715;" FontSize="48" Margin="20"/>
+                        <TextBlock Text="E-mail" FontSize="24"  HorizontalAlignment="Left" FontWeight="Bold" />
+                        <TextBlock x:Uid="Send_us_your_feedback" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="180"/>
+                    </StackPanel>
+                </Button>
+            </ItemsControl>
         </StackPanel>
-    </Grid>
+    </ScrollViewer>
 </Page>

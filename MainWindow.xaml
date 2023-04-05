@@ -39,6 +39,7 @@
         <NavigationView
             x:Name="NavigationViewControl"
             IsTitleBarAutoPaddingEnabled="True"
+            IsSettingsVisible="False"
             AlwaysShowHeader="False"
             Header="Default Header"
             IsTabStop="False" 
@@ -65,28 +66,35 @@
                 </DataTemplate>
             </NavigationView.HeaderTemplate>
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Home" Tag="WinUI3NavigationExample.Views.HomePage" >
+                <NavigationViewItem x:Uid="Home_nav" Tag="Home" >
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE80F;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Hardware" Tag="Hardware" >
+                <NavigationViewItem x:Uid="Hardware_nav" Tag="Hardware" >
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE950;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Connection" Tag="Connection" >
+                <NavigationViewItem x:Uid="Connection_nav" Tag="Connection" >
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE71B;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="About" Tag="About" >
+            </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem x:Uid="About_nav" Tag="About" >
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE946;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-            </NavigationView.MenuItems>
-            <Frame x:Name="ContentFrame" Navigated="ContentFrame_Navigated" Padding="55,10,0,0"/>
+                <NavigationViewItem x:Uid="Settings_nav" Tag="Setting" >
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE713;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.FooterMenuItems>
+                    <Frame x:Name="ContentFrame" Navigated="ContentFrame_Navigated" Padding="0,0,0,0"/>
         </NavigationView>
     </Grid>
 </Window>

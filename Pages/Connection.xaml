@@ -11,22 +11,41 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <StackPanel>
-            <TextBlock Text="Connection" FontSize="36" Margin="10" FontWeight="Bold"/>
-            <TextBlock Text="PMDG 737 Family" FontSize="20" Margin="10" FontWeight="Bold" />
-            <Image Source="/Assets/Images/pmdg737_thumbnail.png" Stretch="UniformToFill" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
-            <TextBlock Text="You can click to launch the console program to connect to PMDG 737NGXu. Please note that the currently supported version of Prepar3D is V4 or V5." Margin="10"/>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Connect to P3D" Margin="10" Click="connect_to_p4d"/>
-                <Button Content="Disconnect from P3D" Margin="10" Click="stop_p4d"/>
-                <TextBlock x:Name="P3DConnectionStatus" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
-            </StackPanel>
-            <TextBlock Text="You can click to launch the console program to connect to PMDG 737NG3." Margin="10"/>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Connect to MSFS" Margin="10" Click="connect_to_msfs"/>
-                <Button Content="Disconnect from MSFS" Margin="10" Click="stop_msfs"/>
-                <TextBlock x:Name="MSFSConnectionStatus" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
-            </StackPanel>
+        <StackPanel Margin="20">
+            <TextBlock x:Uid="Connection_pagetitle" FontSize="36" Margin="10" FontWeight="Bold"/>
+            <TextBlock x:Uid="Connection_onthispage" FontSize="20" Margin="10" TextWrapping="Wrap"/>
+            <TextBlock x:Uid="PMDG_737_Family" FontSize="24" Margin="10" FontWeight="Bold" />
+            <ItemsControl>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="6"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <Button Height="450" Width="400" Background="White" Margin="10" CornerRadius="20">
+                    <StackPanel>
+                        <Image Source="/Assets/Images/pmdg737ng3_thumbnail.png" Width="320" Margin="0,5"/>
+                        <TextBlock Text="PMDG 737 NG3" FontSize="24"  HorizontalAlignment="Center" FontWeight="Bold" Margin="20"/>
+                        <TextBlock x:Uid="You_can_click_to_launch_the_process_to_connect_to_PMDG_737NG3" FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Width="320" Margin="20,5"/>
+                        <TextBlock x:Name="MSFSConnectionStatus" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Uid="Connect_to_MSFS" Margin="10" Click="connect_to_msfs"/>
+                            <Button x:Uid="Disconnect_from_MSFS" Margin="10" Click="stop_msfs"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+                <Button Height="450" Width="400" Background="White" Margin="10" CornerRadius="20">
+                    <StackPanel>
+                        <Image Source="/Assets/Images/pmdg737ngxu_thumbnail.png" Width="320" Margin="0,5"/>
+                        <TextBlock Text="PMDG 737 NGXu" FontSize="24"  HorizontalAlignment="Center" FontWeight="Bold" Margin="20"/>
+                        <TextBlock x:Uid="You_can_click_to_launch_the_process_to_connect_to_PMDG_737NGXu" FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Width="320" Margin="20,5"/>
+                        <TextBlock x:Name="P3DConnectionStatus" Margin="10" HorizontalAlignment="Center" FontWeight="Bold"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Uid="Connect_to_P3D" Margin="10" Click="connect_to_p4d"/>
+                            <Button x:Uid="Disconnect_from_P3D" Margin="10" Click="stop_p4d"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+            </ItemsControl>
         </StackPanel>
     </ScrollViewer>
 

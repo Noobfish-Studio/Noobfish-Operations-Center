@@ -56,28 +56,16 @@ namespace Noobfish_Operations_Center
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             var selectedItem = (NavigationViewItem)args.SelectedItem;
-            if ((string)selectedItem.Tag == "WinUI3NavigationExample.Views.HomePage") ContentFrame.Navigate(typeof(Home));
+            if ((string)selectedItem.Tag == "Home") ContentFrame.Navigate(typeof(Home));
             else if ((string)selectedItem.Tag == "About") ContentFrame.Navigate(typeof(About));
             else if ((string)selectedItem.Tag == "Hardware") ContentFrame.Navigate(typeof(Hardware));
             else if ((string)selectedItem.Tag == "Connection") ContentFrame.Navigate(typeof(Connection));
-            else if ((string)selectedItem.Tag == "Settings") ContentFrame.Navigate(typeof(Settings));
+            else if ((string)selectedItem.Tag == "Setting") ContentFrame.Navigate(typeof(Setting));
         }
 
         private void ContentFrame_Navigated(object sender, NavigationEventArgs e)
         {
             NavigationViewControl.IsBackEnabled = ContentFrame.CanGoBack;
-
-            if (ContentFrame.SourcePageType == typeof(Settings))
-            {
-                // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
-                NavigationViewControl.SelectedItem = (NavigationViewItem)NavigationViewControl.SettingsItem;
-            }
-            //else if (ContentFrame.SourcePageType != null)
-            //{
-            //    NavigationViewControl.SelectedItem = NavigationViewControl.MenuItems
-            //        .OfType<NavigationViewItem>()
-            //        .First(n => n.Tag.Equals(ContentFrame.SourcePageType.FullName.ToString()));
-            //}
 
             NavigationViewControl.Header = ((NavigationViewItem)NavigationViewControl.SelectedItem)?.Content?.ToString();
         }

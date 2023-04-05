@@ -1,14 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Source>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</Source>
-    <SmallTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</SmallTileSource>
-    <MediumTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</MediumTileSource>
-    <WideTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</WideTileSource>
-    <LargeTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</LargeTileSource>
-    <AppIconSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</AppIconSource>
-    <SplashScreenSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</SplashScreenSource>
-    <PackageLogoSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Square44x44Logo.png</PackageLogoSource>
+    <Source>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</Source>
+    <SmallTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</SmallTileSource>
+    <MediumTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</MediumTileSource>
+    <WideTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</WideTileSource>
+    <LargeTileSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</LargeTileSource>
+    <AppIconSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</AppIconSource>
+    <SplashScreenSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</SplashScreenSource>
+    <PackageLogoSource>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Assets\Images\logo11.png</PackageLogoSource>
+    <_LastSelectedProfileId>E:\Develop\FlightSimulator\Noobfish_Operations_Center\Properties\PublishProfiles\win10-x86.pubxml</_LastSelectedProfileId>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <ActiveDebugProfile>Noobfish_Operations_Center (Package)</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
     <None Update="App.xaml">
@@ -20,13 +32,13 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\Setting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Hardware.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Connection.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Settings.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

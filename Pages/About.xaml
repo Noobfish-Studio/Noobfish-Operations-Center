@@ -10,9 +10,102 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <StackPanel>
-            <TextBlock Text="About" FontSize="36" Margin="10" FontWeight="Bold"/>
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <Expander IsExpanded="False" HorizontalAlignment="Left" Margin="10">
+                <Expander.Header>
+                    <StackPanel Margin="20" Width="5000">
+                            <StackPanel  Orientation="Horizontal">
+                                <FontIcon Glyph="&#xECAA;" FontSize="20"/>
+                                <StackPanel>
+                                    <TextBlock Text="  Noobfish Operations Center" FontSize="20"/>
+                                    <TextBlock Text="   Preview Edition 0.1.1" FontSize="15"/>
+                            </StackPanel>
+                            </StackPanel>
+                    </StackPanel>
+                </Expander.Header>
+                <Expander.Content>
+                    <StackPanel HorizontalAlignment="Left" Width="5000">
+                        <TextBlock Text="Developed by 738NGX, Noobfish Studio." FontSize="20" HorizontalAlignment="Left" Margin="10" />
+                        <TextBlock x:Uid="Release_Notes" FontSize="28" Margin="10" FontWeight="Bold"/>
+                        <TextBlock Text="First Preview Edition." FontSize="20" HorizontalAlignment="Left" Margin="10" />
+                    </StackPanel>
+                </Expander.Content>
+            </Expander>
+            <Expander IsExpanded="False" HorizontalAlignment="Left" Margin="10">
+                <Expander.Header>
+                    <StackPanel Margin="20" Width="5000">
+                        <StackPanel  Orientation="Horizontal">
+                            <FontIcon Glyph="&#xE716;" FontSize="20"/>
+                            <TextBlock x:Uid="About_Noobfish_Studio" FontSize="20"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Expander.Header>
+                <Expander.Content>
+                    <StackPanel>
+                        <TextBlock x:Uid="introduction" FontSize="20" HorizontalAlignment="Left" Margin="10" />
+                        <TextBlock x:Uid="Members" FontSize="28" Margin="10" FontWeight="Bold"/>
+                        <ItemsControl>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="4" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <Button Height="300" Width="250" Background="White" Margin="10" CornerRadius="20">
+                                <StackPanel Width="250" HorizontalAlignment="Center">
+                                    <Grid CornerRadius="100" Margin="5" Height="100" Width="100">
+                                        <Image Source="/Assets/Images/Fish.png" Stretch="Fill"/>
+                                    </Grid>
+                                    <TextBlock Text="Fish-SWA" FontSize="28"  HorizontalAlignment="Center" FontWeight="Bold" Margin="5"/>
+                                    <TextBlock x:Uid="SWU" HorizontalAlignment="Center" Margin="5"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="Github" Margin="5" HorizontalAlignment="Center" Click="tofishgithub"/>
+                                        <Button Content="Blog" Margin="5" HorizontalAlignment="Center" Click="tofishblog"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Button>
+                            <Button Height="300" Width="250" Background="White" Margin="10" CornerRadius="20">
+                                <StackPanel Width="250" HorizontalAlignment="Center">
+                                    <Grid CornerRadius="100" Margin="5" Height="100" Width="100">
+                                        <Image Source="/Assets/Images/qianchen36.png" Stretch="Fill"/>
+                                    </Grid>
+                                    <TextBlock Text="qianchen36" FontSize="28"  HorizontalAlignment="Center" FontWeight="Bold" Margin="5"/>
+                                    <TextBlock x:Uid="SZU" HorizontalAlignment="Center" Margin="5"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="Github" Margin="5" HorizontalAlignment="Center" Click="toqianchengithub"/>
+                                        <Button Content="Blog" Margin="5" HorizontalAlignment="Center" Click="toqianchenblog"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Button>
+                            <Button Height="300" Width="250" Background="White" Margin="10" CornerRadius="20">
+                                <StackPanel Width="250" HorizontalAlignment="Center">
+                                    <Grid CornerRadius="100" Margin="5" Height="100" Width="100">
+                                        <Image Source="/Assets/Images/738NGX.png" Stretch="Fill"/>
+                                    </Grid>
+                                    <TextBlock Text="738NGX" FontSize="28"  HorizontalAlignment="Center" FontWeight="Bold" Margin="5"/>
+                                    <TextBlock x:Uid="SUFE" HorizontalAlignment="Center" Margin="5"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="Github" Margin="5" HorizontalAlignment="Center" Click="to738github"/>
+                                        <Button Content="Blog" Margin="5" HorizontalAlignment="Center" Click="to738blog"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Button>
+                            <Button Height="300" Width="250" Background="White" Margin="10" CornerRadius="20">
+                                <StackPanel Width="250" HorizontalAlignment="Center">
+                                    <Grid CornerRadius="100" Margin="5" Height="100" Width="100">
+                                        <Image Source="/Assets/Images/Plum.png" Stretch="Fill"/>
+                                    </Grid>
+                                    <TextBlock Text="Little-Plum" FontSize="28"  HorizontalAlignment="Center" FontWeight="Bold" Margin="5"/>
+                                    <TextBlock x:Uid="ZUST" HorizontalAlignment="Center" Margin="5"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="Github" Margin="5" HorizontalAlignment="Center" Click="toplumgithub"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Button>
+                        </ItemsControl>
+                    </StackPanel>
+                </Expander.Content>
+            </Expander>
         </StackPanel>
-    </Grid>
+    </ScrollViewer>
 </Page>

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Home_nav.Content" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="Hardware_nav.Content" xml:space="preserve">
+    <value>硬件</value>
+  </data>
+  <data name="Connection_nav.Content" xml:space="preserve">
+    <value>连接</value>
+  </data>
+  <data name="About_nav.Content" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="Settings_nav.Content" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Website.Text" xml:space="preserve">
+    <value>官网</value>
+  </data>
+  <data name="Visit_our_official_website.Text" xml:space="preserve">
+    <value>访问我们的官方网站: noobfish.com</value>
+  </data>
+  <data name="View_our_Github.Text" xml:space="preserve">
+    <value>访问我们的Github仓库来帮助我们改进</value>
+  </data>
+  <data name="Document.Text" xml:space="preserve">
+    <value>文档</value>
+  </data>
+  <data name="Check_out_the_document.Text" xml:space="preserve">
+    <value>查阅文档来获得更多信息与帮助</value>
+  </data>
+  <data name="Shop.Text" xml:space="preserve">
+    <value>商店</value>
+  </data>
+  <data name="Subscribe_and_purchase.Text" xml:space="preserve">
+    <value>在商店关注和购买我们的最新产品</value>
+  </data>
+  <data name="Send_us_your_feedback.Text" xml:space="preserve">
+    <value>通过电子邮件向我们给出反馈与建议</value>
+  </data>
+  <data name="Hardware_pagetitle.Text" xml:space="preserve">
+    <value>硬件</value>
+  </data>
+  <data name="Hardware_onthispage.Text" xml:space="preserve">
+    <value>在此页面上，你可以查看到连接到计算机的Noobfish外设硬件信息</value>
+  </data>
+  <data name="Boeing_737_Family.Text" xml:space="preserve">
+    <value>适用于波音737系列</value>
+  </data>
+  <data name="CDU_for_Boeing_737_USB.Text" xml:space="preserve">
+    <value>波音737 CDU (USB版)</value>
+  </data>
+  <data name="CDU_Support.Text" xml:space="preserve">
+    <value>支持: Prepar3D V4 V5; 微软模拟飞行</value>
+  </data>
+  <data name="Connection_status.Text" xml:space="preserve">
+    <value>连接状态: </value>
+  </data>
+  <data name="SN_Code.Text" xml:space="preserve">
+    <value>SN码: </value>
+  </data>
+  <data name="Firmware_Version.Text" xml:space="preserve">
+    <value>固件版本: </value>
+  </data>
+  <data name="Restore_factory_settings.Content" xml:space="preserve">
+    <value>恢复出厂设置</value>
+  </data>
+  <data name="Upgrade_firmware_version.Content" xml:space="preserve">
+    <value>升级固件版本</value>
+  </data>
+  <data name="Coming_Soon.Text" xml:space="preserve">
+    <value>即将推出......</value>
+  </data>
+  <data name="Connection_pagetitle.Text" xml:space="preserve">
+    <value>连接</value>
+  </data>
+  <data name="Connection_onthispage.Text" xml:space="preserve">
+    <value>在此界面上，你可以启动连接到模拟器的上位机进程</value>
+  </data>
+  <data name="PMDG_737_Family.Text" xml:space="preserve">
+    <value>连接到 PMDG 737 系列</value>
+  </data>
+  <data name="You_can_click_to_launch_the_process_to_connect_to_PMDG_737NGXu.Text" xml:space="preserve">
+    <value>你可以点击来启动连接到PMDG 737 NGXu的上位机进程，请注意支持的Prepar3D版本为V4或V5。</value>
+  </data>
+  <data name="Connect_to_P3D.Content" xml:space="preserve">
+    <value>连接到P3D</value>
+  </data>
+  <data name="Disconnect_from_P3D.Content" xml:space="preserve">
+    <value>从P3D断开连接</value>
+  </data>
+  <data name="You_can_click_to_launch_the_process_to_connect_to_PMDG_737NG3.Text" xml:space="preserve">
+    <value>你可以点击来启动连接到PMDG 737 NG3的上位机进程</value>
+  </data>
+  <data name="Connect_to_MSFS.Content" xml:space="preserve">
+    <value>连接到MSFS</value>
+  </data>
+  <data name="Disconnect_from_MSFS.Content" xml:space="preserve">
+    <value>从MSFS断开连接</value>
+  </data>
+  <data name="Release_Notes.Text" xml:space="preserve">
+    <value>版本记录</value>
+  </data>
+  <data name="About_Noobfish_Studio.Text" xml:space="preserve">
+    <value>关于Noobfish Studio</value>
+  </data>
+  <data name="This_Changes_Everything.Text" xml:space="preserve">
+    <value>又一次，改变世界。</value>
+  </data>
+  <data name="introduction.Text" xml:space="preserve">
+    <value>Noobfish Studio成立于2023年3月26日，由四个热爱航空的大学生组成。</value>
+  </data>
+  <data name="Members.Text" xml:space="preserve">
+    <value>成员</value>
+  </data>
+  <data name="SWU.Text" xml:space="preserve">
+    <value>@西南大学</value>
+  </data>
+  <data name="SZU.Text" xml:space="preserve">
+    <value>@深圳大学</value>
+  </data>
+  <data name="SUFE.Text" xml:space="preserve">
+    <value>@上海财经大学</value>
+  </data>
+  <data name="ZUST.Text" xml:space="preserve">
+    <value>@浙江科技学院</value>
+  </data>
+  <data name="SWU.FontSize" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="SZU.FontSize" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="SUFE.FontSize" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ZUST.FontSize" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="Acknowledgments.Text" xml:space="preserve">
+    <value>鸣谢</value>
+  </data>
+  <data name="Thanks.Text" xml:space="preserve">
+    <value>感谢所有对Noobfish的支持</value>
+  </data>
+  <data name="Settings_pagetitle.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="LanguageRadioButtons.Header" xml:space="preserve">
+    <value>语言（重启程序后生效）</value>
+  </data>
+</root>

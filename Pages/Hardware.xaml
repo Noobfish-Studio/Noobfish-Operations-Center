@@ -10,7 +10,38 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock Text="Hardware"/>
-    </Grid>
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <TextBlock x:Uid="Hardware_pagetitle" FontSize="36" Margin="10" FontWeight="Bold"/>
+            <TextBlock x:Uid="Hardware_onthispage" FontSize="20" Margin="10" TextWrapping="Wrap"/>
+            <TextBlock x:Uid="Boeing_737_Family" FontSize="24" Margin="10" FontWeight="Bold"/>
+            <ItemsControl>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="6"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <Button Height="500" Width="400" Background="White" Margin="10" CornerRadius="20">
+                    <StackPanel>
+                        <Image Source="/Assets/Images/737CDU.jpg" Height="250"/>
+                        <TextBlock x:Uid="CDU_for_Boeing_737_USB" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold" Margin="20"/>
+                        <TextBlock x:Uid="CDU_Support" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="400" Margin="20,5"/>
+                        <TextBlock x:Uid="Connection_status" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="400" Margin="20,0" FontWeight="bold"/>
+                        <TextBlock x:Uid="SN_Code" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="400" Margin="20,0"/>
+                        <TextBlock x:Uid="Firmware_Version" FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="400" Margin="20,0"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Uid="Restore_factory_settings" Margin="10"/>
+                            <Button x:Uid="Upgrade_firmware_version" Margin="10"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+                <Button Height="500" Width="400" Background="White" Margin="10" CornerRadius="20">
+                    <StackPanel>
+                        <FontIcon Glyph="&#xE897;" FontSize="100" Margin="20"/>
+                        <TextBlock x:Uid="Coming_Soon" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold" />
+                    </StackPanel>
+                </Button>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
 </Page>
